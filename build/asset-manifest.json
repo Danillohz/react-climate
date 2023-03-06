@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.23883e9b.css",
-    "main.js": "/react-gh-pages/static/js/main.377765a1.js",
-    "static/js/787.259c82da.chunk.js": "/react-gh-pages/static/js/787.259c82da.chunk.js",
-    "static/media/Lua.png": "/react-gh-pages/static/media/Lua.1d0903874b3e1d1ba021.png",
-    "static/media/Nublado.png": "/react-gh-pages/static/media/Nublado.d381accd636fe4ace071.png",
-    "static/media/Sol.png": "/react-gh-pages/static/media/Sol.2330d276794eb0e13882.png",
-    "static/media/Nuvem_trovoada.png": "/react-gh-pages/static/media/Nuvem_trovoada.4ff8b6ff665e2ec7f4b8.png",
-    "static/media/Nuvem_Clara.png": "/react-gh-pages/static/media/Nuvem_Clara.5cbea79f363fed05889f.png",
-    "index.html": "/react-gh-pages/index.html",
-    "main.23883e9b.css.map": "/react-gh-pages/static/css/main.23883e9b.css.map",
-    "main.377765a1.js.map": "/react-gh-pages/static/js/main.377765a1.js.map",
-    "787.259c82da.chunk.js.map": "/react-gh-pages/static/js/787.259c82da.chunk.js.map"
+    "main.css": "/Danillohz/Climate/static/css/main.23883e9b.css",
+    "main.js": "/Danillohz/Climate/static/js/main.01b0956b.js",
+    "static/js/787.259c82da.chunk.js": "/Danillohz/Climate/static/js/787.259c82da.chunk.js",
+    "static/media/Lua.png": "/Danillohz/Climate/static/media/Lua.1d0903874b3e1d1ba021.png",
+    "static/media/Nublado.png": "/Danillohz/Climate/static/media/Nublado.d381accd636fe4ace071.png",
+    "static/media/Sol.png": "/Danillohz/Climate/static/media/Sol.2330d276794eb0e13882.png",
+    "static/media/Nuvem_trovoada.png": "/Danillohz/Climate/static/media/Nuvem_trovoada.4ff8b6ff665e2ec7f4b8.png",
+    "static/media/Nuvem_Clara.png": "/Danillohz/Climate/static/media/Nuvem_Clara.5cbea79f363fed05889f.png",
+    "index.html": "/Danillohz/Climate/index.html",
+    "main.23883e9b.css.map": "/Danillohz/Climate/static/css/main.23883e9b.css.map",
+    "main.01b0956b.js.map": "/Danillohz/Climate/static/js/main.01b0956b.js.map",
+    "787.259c82da.chunk.js.map": "/Danillohz/Climate/static/js/787.259c82da.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.23883e9b.css",
-    "static/js/main.377765a1.js"
+    "static/js/main.01b0956b.js"
   ]
 }
