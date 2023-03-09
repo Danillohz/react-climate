@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-climate/static/css/main.bb93a586.css",
-    "main.js": "/react-climate/static/js/main.d9bf0653.js",
+    "main.js": "/react-climate/static/js/main.b97221ea.js",
     "static/js/787.259c82da.chunk.js": "/react-climate/static/js/787.259c82da.chunk.js",
     "static/media/Lua.png": "/react-climate/static/media/Lua.1d0903874b3e1d1ba021.png",
     "static/media/Nublado.png": "/react-climate/static/media/Nublado.d381accd636fe4ace071.png",
@@ -10,11 +10,11 @@
     "static/media/Nuvem_Clara.png": "/react-climate/static/media/Nuvem_Clara.5cbea79f363fed05889f.png",
     "index.html": "/react-climate/index.html",
     "main.bb93a586.css.map": "/react-climate/static/css/main.bb93a586.css.map",
-    "main.d9bf0653.js.map": "/react-climate/static/js/main.d9bf0653.js.map",
+    "main.b97221ea.js.map": "/react-climate/static/js/main.b97221ea.js.map",
     "787.259c82da.chunk.js.map": "/react-climate/static/js/787.259c82da.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bb93a586.css",
-    "static/js/main.d9bf0653.js"
+    "static/js/main.b97221ea.js"
   ]
 }
