@@ -1,4 +1,5 @@
-import './App.css';
+import './styles/appGlobal.css';
+import './styles/appGlobalMediaQuery.css';
 import SearchContainer from './components/SearchContainer';
 
 
