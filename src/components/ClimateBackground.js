@@ -20,48 +20,46 @@ const ClimateBackground = ({ weatherForcast }) => {
   const [stylebackground, setstylebackground] = useState("BackgroundDefault")
   const [isDay, setIsDay] = useState(true);
   const [climate, setClimate] = useState(null);
-  const [imgOneCloud, setImgOneCloud] = useState(TranspImg)
-  const [imgTwoCloud, setImgTwoCloud] = useState(TranspImg)
-  const [imgThreeCloud, setImgThreeCloud] = useState(TranspImg)
-  const [imgSunAndMoon, setImgSunAndMoon] = useState(TranspImg)
-  //passa pelas duas primeiras condições de mudança do fundo caso esteja em false
-  const [isExecutedDayorNight, setIsExecutedDayorNight] = useState(false);
-  
+  const [imgOneCloud, setImgOneCloud] = useState(TranspImg);
+  const [imgTwoCloud, setImgTwoCloud] = useState(TranspImg);
+  const [imgThreeCloud, setImgThreeCloud] = useState(TranspImg);
+  const [imgSunAndMoon, setImgSunAndMoon] = useState(TranspImg);
+
   const RainParticleOptions = RainParticleOption();
   const SnowParticleOptions = SnowParticleOption();
-  
+
 
   console.log(climate)
   //Define as configurações para a produção de partículas
-    //níveis de particula
-    const levelZeroParticles = 0;
-    const levelOneParticles = 100;
-    const levelTwoParticles = 300;
-    const levelThreeParticles  = 500;
-    const levelFourParticles = 700;
+  //níveis de particula
+  const levelZeroParticles = 0;
+  const levelOneParticles = 100;
+  const levelTwoParticles = 300;
+  const levelThreeParticles = 500;
+  const levelFourParticles = 700;
 
-    const [rainLevel, setRainLevel] = useState(levelZeroParticles)
-    const [snowLevel, setSnowLevel] = useState(levelZeroParticles)
+  const [rainLevel, setRainLevel] = useState(levelZeroParticles)
+  const [snowLevel, setSnowLevel] = useState(levelZeroParticles)
 
-    //Define as particulas options de chuva
-    const NewRainParticleOptions = Object.assign({}, RainParticleOptions);
-    NewRainParticleOptions.particles.number.value = rainLevel
+  //Define as particulas options de chuva
+  const NewRainParticleOptions = Object.assign({}, RainParticleOptions);
+  NewRainParticleOptions.particles.number.value = rainLevel
 
-    const NewSnowParticleOptions = Object.assign({}, SnowParticleOptions);
-    NewSnowParticleOptions.particles.number.value = snowLevel
-    
-    const particlesInit = useCallback(async engine => {
-      console.log(engine);
-      await loadFull(engine);
-    }, []);
-  
-    const particlesLoaded = useCallback(async container => {
-      await console.log(container);
-    }, []);
-    
+  const NewSnowParticleOptions = Object.assign({}, SnowParticleOptions);
+  NewSnowParticleOptions.particles.number.value = snowLevel
+
+  const particlesInit = useCallback(async engine => {
+    console.log(engine);
+    await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async container => {
+    await console.log(container);
+  }, []);
+
   //
 
-    //set a string do climate
+  //set a string do climate
   useEffect(() => {
     setClimate(weatherForcast?.current?.condition?.text)
   }, [weatherForcast]);
@@ -80,8 +78,8 @@ const ClimateBackground = ({ weatherForcast }) => {
   }, [weatherForcast]);
 
   //muda o Background e imagem do sol e da lua
-    const DayOrNight = () =>{
-    if (isDay === 1 ) {
+  const DayOrNight = () => {
+    if (isDay === 1) {
       setstylebackground("BackgroundDay");
       setImgSunAndMoon(Sun)
     } else if (isDay === 0) {
@@ -90,8 +88,9 @@ const ClimateBackground = ({ weatherForcast }) => {
     } else {
       setstylebackground("BackgroundDefault");
       setImgSunAndMoon(TranspImg)
-    }}
- 
+    }
+  }
+
   //Muda as imagens a quantidade de particua e o fundo dependendo do clima 
   useEffect(() => {
     //1
@@ -102,13 +101,13 @@ const ClimateBackground = ({ weatherForcast }) => {
       DayOrNight();
       setRainLevel(levelZeroParticles);
       setSnowLevel(levelZeroParticles);
-      
+
 
     }
     //2
     else if (climate === "Parcialmente nublado" || climate === "Encoberto") {
-      setImgOneCloud(whiteCloud);
-      setImgTwoCloud(whiteCloud);
+      setImgOneCloud(TranspImg);
+      setImgTwoCloud(TranspImg);
       setImgThreeCloud(whiteCloud);
       DayOrNight();
       setRainLevel(levelZeroParticles)
@@ -123,8 +122,8 @@ const ClimateBackground = ({ weatherForcast }) => {
       setstylebackground("BackgroundGreyDay");
       setRainLevel(levelZeroParticles);
       setSnowLevel(levelZeroParticles);
-      
-      
+
+
 
 
 
@@ -137,10 +136,10 @@ const ClimateBackground = ({ weatherForcast }) => {
       setstylebackground("BackgroundGreyDay");
       setRainLevel(levelZeroParticles);
       setSnowLevel(levelZeroParticles);
-      
-      
+
+
     }
-    else if (climate === "Rajadas de vento com neve"){
+    else if (climate === "Rajadas de vento com neve") {
       setImgOneCloud(whiteCloud);
       setImgTwoCloud(whiteCloud);
       setImgThreeCloud(whiteCloud);
@@ -148,10 +147,10 @@ const ClimateBackground = ({ weatherForcast }) => {
       setstylebackground("BackgroundGreyDay");
       setRainLevel(levelZeroParticles)
       setSnowLevel(levelOneParticles);
-      
+
     }
-    else if (climate === "Chuvisco irregular" || climate === "Chuvisco de chuva irregular" || climate === "Chuvisco gelado" || climate === "Chuvisco forte gelado" || climate === "Chuva fraca irregular" || climate === "Chuva fraca" || climate === "Períodos de chuva moderadamente" || climate === "Chuva fraca e gelada" || climate === "Aguaceiros fracos" || climate === "Aguaceiros flexíveis" || climate ==="Períodos de chuva moderada") {
-      
+    else if (climate === "Chuva moderada"||climate === "Chuvisco irregular" || climate === "Chuvisco de chuva irregular" || climate === "Chuvisco gelado" || climate === "Chuvisco forte gelado" || climate === "Chuva fraca irregular" || climate === "Chuva fraca" || climate === "Períodos de chuva moderadamente" || climate === "Chuva fraca e gelada" || climate === "Aguaceiros fracos" || climate === "Aguaceiros flexíveis" || climate === "Períodos de chuva moderada" || climate === "Chuvisco") {
+
       setImgOneCloud(BlackCloud);
       setImgTwoCloud(BlackCloud);
       setImgThreeCloud(BlackCloud);
@@ -159,11 +158,11 @@ const ClimateBackground = ({ weatherForcast }) => {
       setstylebackground("BackgroundGreyDay");
       setRainLevel(levelOneParticles)
       setSnowLevel(levelZeroParticles);
-      
-      
+
+
 
     }
-    else if(climate ==="Chuvisco forte gelado"){
+    else if (climate === "Chuvisco forte gelado") {
       setImgOneCloud(BlackCloud);
       setImgTwoCloud(BlackCloud);
       setImgThreeCloud(BlackCloud);
@@ -171,7 +170,7 @@ const ClimateBackground = ({ weatherForcast }) => {
       setstylebackground("BackgroundGreyDay");
       setRainLevel(levelThreeParticles)
       setSnowLevel(levelZeroParticles);
-      
+
     }
     else if (climate === "Chuva pesada" || climate === "Períodos de chuva forte" || climate === "Chuva forte" || climate === "Chuva gelada moderada ou forte" || climate === "Chuva torrencial" || climate === "Aguaceiros moderados ou fortes") {
 
@@ -182,10 +181,10 @@ const ClimateBackground = ({ weatherForcast }) => {
       setstylebackground("BackgroundGreyDay");
       setRainLevel(levelFourParticles)
       setSnowLevel(levelZeroParticles);
-      
+
 
     }
-    else if (climate === "Chuva fraca com neve" || climate === "Aguaceiros fracos com neve"){
+    else if (climate === "Chuva fraca com neve" || climate === "Aguaceiros fracos com neve") {
       setImgOneCloud(whiteCloud);
       setImgTwoCloud(BlackCloud);
       setImgThreeCloud(whiteCloud);
@@ -194,7 +193,7 @@ const ClimateBackground = ({ weatherForcast }) => {
       setRainLevel(levelOneParticles)
       setSnowLevel(levelOneParticles);
     }
-    else if (climate === "Chuva forte ou moderadamente com neve" || climate === "Aguaceiros moderados ou fortes com neve"){
+    else if (climate === "Chuva forte ou moderadamente com neve" || climate === "Aguaceiros moderados ou fortes com neve") {
       setImgOneCloud(BlackCloud);
       setImgTwoCloud(BlackCloud);
       setImgThreeCloud(BlackCloud);
@@ -212,10 +211,10 @@ const ClimateBackground = ({ weatherForcast }) => {
       setstylebackground("BackgroundGreyDay");
       setRainLevel(levelZeroParticles)
       setSnowLevel(levelTwoParticles);
-      
+
 
     }
-    else if (climate === "Neve intensa"){
+    else if (climate === "Neve intensa") {
       setImgOneCloud(whiteCloud);
       setImgTwoCloud(BlackCloud);
       setImgThreeCloud(whiteCloud);
@@ -235,7 +234,7 @@ const ClimateBackground = ({ weatherForcast }) => {
       setSnowLevel(levelZeroParticles);
 
     }
-    else if(climate === "Chuva fraca irregular com trovoada" || climate ==="Chuva moderada ou forte com trovoada"){
+    else if (climate === "Chuva fraca irregular com trovoada" || climate === "Chuva moderada ou forte com trovoada") {
       setImgOneCloud(thunderstormCloud);
       setImgTwoCloud(BlackCloud);
       setImgThreeCloud(thunderstormCloud);
@@ -243,9 +242,9 @@ const ClimateBackground = ({ weatherForcast }) => {
       setstylebackground("BackgroundGreyDay");
       setRainLevel(levelThreeParticles)
       setSnowLevel(levelZeroParticles)
-      
+
     }
-    else if(climate === "Neve fraca irregular com trovoada" || climate ==="Neve moderada ou forte com trovoada"){
+    else if (climate === "Neve fraca irregular com trovoada" || climate === "Neve moderada ou forte com trovoada") {
       setImgOneCloud(BlackCloud);
       setImgTwoCloud(thunderstormCloud);
       setImgThreeCloud(BlackCloud);
@@ -261,7 +260,7 @@ const ClimateBackground = ({ weatherForcast }) => {
       setSnowLevel(levelZeroParticles);
       setRainLevel(levelZeroParticles);
       DayOrNight();
-      
+
 
     }
 
@@ -274,23 +273,23 @@ const ClimateBackground = ({ weatherForcast }) => {
     <>
 
       <Particles
-                id="tsRainparticles"
-                init={particlesInit}
-                loaded={particlesLoaded}
-                options={NewRainParticleOptions}
+        id="tsRainparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={NewRainParticleOptions}
       />
       <Particles
-                id="tsSnowparticles"
-                init={particlesInit}
-                loaded={particlesLoaded}
-                options={NewSnowParticleOptions}
+        id="tsSnowparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={NewSnowParticleOptions}
       />
-            
-         
+
+
+
 
       <div className={stylebackground}>
-
-        <img className="OneCloud" src={imgOneCloud} alt="" />
+        <img className="OneCloud" src={imgOneCloud} alt=""/>
         <img className="TwoCloud" src={imgTwoCloud} alt="" />
         <img className="ThreeCloud" src={imgThreeCloud} alt="" />
         <img className="SunAndMoon" src={imgSunAndMoon} alt="" />

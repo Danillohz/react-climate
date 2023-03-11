@@ -1,75 +1,67 @@
 @media all{
-
-
-.App {
-  text-align: left;
-  width: 100vw;
-  height: 100%;
-  
-}
-
-body, html{
-  width: 100vw;
-}
-
-body{
-  min-height: 100vh;
+*{
+  margin: 0;
+  padding: 0;
 }
 
 .ContainerAfter{
   position: relative;
-  
-  width: 100%;
+  width: 85%;
   max-width: 400px;
-  min-width: 10px;
-  height: 100%;
+  max-height: 100%;
   margin: auto;
   border-radius: 10px;
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.168);
   background-color: rgba(41, 41, 41, 0.248);
-  line-height: 25px;
-  transform: translate(0%, +45%);
+  
+  transform: translate(0%, +55%);
   z-index: 5;
 }
 .ContainerBefore{
 
   position: relative;
-  width: 100%;
+  width: 85%;
   max-width: 400px;
-  min-width: 10px;
-  height: 110%;
+  height: 100%;
   margin: auto;
   border: 1px solid gray;
   border-radius: 10px;
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.168);
   background-color: rgb(255, 255, 255);
 
-  line-height: 25px;
+  
 
   transform: translate(0%, +65%);
   z-index: 5;
 }
 
+
+
 div > h1{
   color: rgb(62, 62, 62);
-  margin-left: 10px;
-  font-size: 23px;
+  margin: 0px 16px 0px 0px;
+  padding: 8px;
+  font-size: 24px;
+  text-align: left;
+  
 }
 div > h2{
   color: rgb(76, 194, 127);
-  font-size: 18px;
-  margin-top: 15px;
-  margin-left: 10px;
+  font-size: 15px;
+  margin: 0px 0px 0px 10px;
+  text-align: left;
+  
 }
 
 .Form-control{
   width: 60%;
-  height: 35px;
-  margin: 10px 0px 20px 10px;
+  height: 31px;
+  margin: 0px 0px 0px 10px;
   outline: 0px;
-  font-size: 20px;
+  font-size: 16px;
   text-indent: 4px;
   
+  transform: translate(0%, -30%);
 }
 .Form-control:focus{
   
@@ -80,34 +72,46 @@ div > h2{
 }
 
 .btnSearch{
+  position: relative;
   color: white;
   background-color: rgb(0, 153, 255);
   border: 0px;
-  border-radius: 10px;
-  padding: 10px;
-  margin-left: 20px;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  margin: 10px 0px 0px 5px;
   
+  transform: translate(0%, -4px);
+}
+
+.Forcast{
+  width: 100%;
+  height: 100%;
 }
 
 .Icon{
-  width: 100px;
-  margin: 0px;
- }
-.Icon img{
- display: flex;
- margin: 10px 0px 20px 15px;
-}
-.Temp{
-  display: inline-block;
   
-  margin: -15px 0px 0px 30px;
-  font-size: 14px;
+  position: relative;
+  width: 100px;
+  height: 100%;
+  margin: 10px 0px 0px 10px;
+  transform: translate(0%, -30%);
+ }
+
+.Temp{
+  position: relative;
+  margin: -30px 0px 0px 20px;
+  max-width: 100%;
+  font-size: 13px;
   
   
 }
 .Local{
-  display: inline-flex;
-  margin: 0px 0px 10px 30px;
+  display: inline-block;
+  position: relative;
+  margin: 3px 0px 0px 20px;
+  max-width: 100%;
+  height: 6vh;
   font-size: 12px;
   
 }
@@ -116,64 +120,66 @@ div > h2{
   position: absolute;
   background: linear-gradient(to top, #7EBFD9 10%, #049DD9 30%, #0477BF 70% , #035AA6 100%);
   width: 100%;
-  height: 130vh;
+  height: 100%;
+  overflow: hidden;
   
 }
 .BackgroundNight{
   position: absolute;
   background: linear-gradient(to top, #1F72A6 10%, #204F8C 30%, #092140 70% , #051426 100%);
   width: 100%;
-  height: 130vh;
+  height: 100%;
+  overflow: hidden;
 }
 .BackgroundDefault{
   position: absolute;
   background-color: #ffffff;
   width: 100%;
-  height: 130vh;
+  height: 100%;
+  overflow: hidden;
 }
 .BackgroundGreyDay{
   position: absolute;
   background: linear-gradient(to top, #BEBDBF 10%, #89888C 30%, #565659 70% , #474749 100%);
   width: 100%;
-  height: 130vh;
+  height: 100%;
+  overflow: hidden;
+  
 }
 
 img.OneCloud{
   position: absolute;
-  width: 90%;
-  max-width: 600px;
-  height: 60%;
-  max-height: 500px;
+  width: 80%;
+  height: auto;
 
-  left: 30%;
-  top: 150px;
 
-  z-index: 2;
+  left: 25%;
+  top: 90px;
+
+  z-index: 1;
   transform: translate(-50%, -50%);
   
 }
 img.TwoCloud{
   position: absolute;
-  width: 80%;
-  max-width: 600px;
-  height: 60%;
-  max-height: 500px;
+  width: 110%;
+  height: auto;
+ 
 
   left: 50%;
-  top: 150px;
+  top: 90px;
 
   z-index: 2;
   transform: translate(-50%, -50%);
 }
 img.ThreeCloud{
   position: absolute;
-  width: 60%;
-  max-width: 600px;
-  height: 60%;
-  max-height: 500px;
+  width: 80%;
+  height: auto;
+  
 
-  left: 70%;
-  top: 150px;
+  left:70%;
+  top: 100px;
 
   z-index: 1;
   transform: translate(-50%, -50%);
@@ -181,11 +187,12 @@ img.ThreeCloud{
 
 img.SunAndMoon{
   position: absolute;
-  width: 250px;
-  height: 250px;
+  width: 140px;
+  height: auto;
+
   
   left: 50%;
-  top: -2%;
+  top: 10px;
 
   z-index: 0;
   transform: translate(-50%);
