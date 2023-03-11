@@ -156,7 +156,7 @@ const ClimateBackground = ({ weatherForcast }) => {
       setImgThreeCloud(BlackCloud);
       DayOrNight();
       setstylebackground("BackgroundGreyDay");
-      setRainLevel(levelOneParticles)
+      setRainLevel(levelTwoParticles)
       setSnowLevel(levelZeroParticles);
 
 
