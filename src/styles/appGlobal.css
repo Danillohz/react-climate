@@ -37,14 +37,21 @@
 
 
 
-div > h1{
+.textInitialBefore{
   color: rgb(62, 62, 62);
   margin: 0px 16px 0px 0px;
   padding: 8px;
   font-size: 24px;
   text-align: left;
-  
 }
+.textInitialAfter{
+  color: rgb(217, 213, 219);
+  margin: 0px 16px 0px 0px;
+  padding: 8px;
+  font-size: 24px;
+  text-align: left;
+}
+
 div > h2{
   color: rgb(76, 194, 127);
   font-size: 15px;
@@ -133,7 +140,9 @@ div > h2{
 }
 .BackgroundDefault{
   position: absolute;
-  background-color: #ffffff;
+  background: white url("../imagens/Planeta_Terra.jpg") no-repeat center center;
+  background-size: cover;
+
   width: 100%;
   height: 100%;
   overflow: hidden;

@@ -7,6 +7,7 @@ const Container = () => {
     const [weatherForcast, setweatherForcast] = useState(null)
     //Muda a aparencia do container caso clickado
     const [ContainerAfter, setContainerAfter] = useState("ContainerBefore")
+    const [textInitial, setTextInitial] = useState("textInitialBefore")
 
 
     //faz o valor da barra de pesquisa mudar para qual o usuario escolher
@@ -18,6 +19,7 @@ const Container = () => {
     const handleSearch = () => {
 
         setContainerAfter("ContainerAfter")
+        setTextInitial("textInitialAfter")
         setweatherForcast(null)
         fetch(`https://api.weatherapi.com/v1/current.json?key=5ac7719d7ef34a018a835519230203&q=${city}&lang=pt`)
             .then((response) => {
@@ -34,6 +36,8 @@ const Container = () => {
             })
             .catch((error) => {
                 console.error(error);
+                setContainerAfter("ContainerBefore")
+                setTextInitial("textInitialBefore")
                 setcity("")
                 setweatherForcast(null)
 
@@ -48,7 +52,7 @@ const Container = () => {
             <ClimateBackground weatherForcast={weatherForcast} />
 
             <div className={ContainerAfter} >
-                <h1><strong>Verifique agora a previsão do tempo da sua cidade!</strong></h1>
+                <h1 className={textInitial}><strong>Verifique agora a previsão do tempo da sua cidade!</strong></h1>
                 <h2>Digite o nome da sua cidade abaixo</h2>
 
                 <input
