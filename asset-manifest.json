@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/react-climate/static/css/main.8cc16c1c.css",
-    "main.js": "/react-climate/static/js/main.07d315c5.js",
+    "main.css": "/react-climate/static/css/main.14fc4930.css",
+    "main.js": "/react-climate/static/js/main.b541a6af.js",
     "static/js/787.259c82da.chunk.js": "/react-climate/static/js/787.259c82da.chunk.js",
     "static/media/Lua.png": "/react-climate/static/media/Lua.1d0903874b3e1d1ba021.png",
     "static/media/Nublado.png": "/react-climate/static/media/Nublado.d381accd636fe4ace071.png",
+    "static/media/Planeta_Terra.jpg": "/react-climate/static/media/Planeta_Terra.cf18361a5251c8935ed5.jpg",
     "static/media/Sol.png": "/react-climate/static/media/Sol.2330d276794eb0e13882.png",
     "static/media/Nuvem_trovoada.png": "/react-climate/static/media/Nuvem_trovoada.4ff8b6ff665e2ec7f4b8.png",
     "static/media/Nuvem_Clara.png": "/react-climate/static/media/Nuvem_Clara.5cbea79f363fed05889f.png",
     "index.html": "/react-climate/index.html",
-    "main.8cc16c1c.css.map": "/react-climate/static/css/main.8cc16c1c.css.map",
-    "main.07d315c5.js.map": "/react-climate/static/js/main.07d315c5.js.map",
+    "main.14fc4930.css.map": "/react-climate/static/css/main.14fc4930.css.map",
+    "main.b541a6af.js.map": "/react-climate/static/js/main.b541a6af.js.map",
     "787.259c82da.chunk.js.map": "/react-climate/static/js/787.259c82da.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8cc16c1c.css",
-    "static/js/main.07d315c5.js"
+    "static/css/main.14fc4930.css",
+    "static/js/main.b541a6af.js"
   ]
 }
