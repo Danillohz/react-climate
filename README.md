@@ -9,7 +9,7 @@ acesse o link aqui:https://danillohz.github.io/react-climate/
 ![Web 1](https://github.com/Danillohz/Assets/blob/main/Imagens/Weather-App/Weather-App-Img1-PCWeb.PNG)
 ![Web 2](https://github.com/Danillohz/Assets/blob/main/Imagens/Weather-App/Weather-App-Img2-PCWeb.PNG)
 
-![Web 3](https://github.com/Danillohz/Assets/blob/main/Imagens/Weather-App/Weather-App-Img1-MobileWeb.PNG) 
+![Mobile 1](https://github.com/Danillohz/Assets/blob/main/Imagens/Weather-App/Weather-App-Img1-MobileWeb.PNG) 
 ![Web 4](https://github.com/Danillohz/Assets/blob/main/Imagens/Weather-App/Weather-App-Img2-MobileWeb.PNG)
 
 # Tecnologias utilizadas
